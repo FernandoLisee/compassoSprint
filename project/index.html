@@ -1,0 +1,414 @@
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="navbar.css"/>  
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="search.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="api.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" href="img/books3.png"/>
+  <title>MyReads</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+
+<header>  <!-- NAVBAR -->             
+        <div class="card-header">
+		  <ul class="nav nav-tabs">
+			<img class="icone" src="img/study.png"/>
+			<a class="navbar-brand" href="#">E-Books</a>
+			<li class="nav-item">
+				<a class="nav-link" href="index.html" role="tab" aria-expanded="true">	
+					<i class="bi bi-house"></i>
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+						<path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+						<path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+					  </svg>
+					Home
+				</a>
+			</li>
+			<li class="nav-item1">
+				<a class="nav-link" href="lendo.html" role="tab" aria-expanded="true">	
+					<i aria-label="icon: eye" class="anticon anticon-eye">
+					<svg viewBox="64 64 896 896" focusable="false" class="" data-icon="eye" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M942.2 486.2C847.4 286.5 704.1 186 512 186c-192.2 0-335.4 100.5-430.2 300.3a60.3 60.3 0 0 0 0 51.5C176.6 737.5 319.9 838 512 838c192.2 0 335.4-100.5 430.2-300.3 7.7-16.2 7.7-35 0-51.5zM512 766c-161.3 0-279.4-81.8-362.7-254C232.6 339.8 350.7 258 512 258c161.3 0 279.4 81.8 362.7 254C791.5 684.2 673.4 766 512 766zm-4-430c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm0 288c-61.9 0-112-50.1-112-112s50.1-112 112-112 112 50.1 112 112-50.1 112-112 112z"></path></svg></i>
+					Currently Reading
+				</a>
+			</li>
+			<li class="nav-item1">
+				<a class="nav-link" href="queroLer.html" role="tab" aria-expanded="false">
+					<i class="bi bi-search"></i>
+					<svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+						<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+					  </svg>
+					 Want to Read</a>
+			</li>
+            <li class="nav-item1">
+				<a class="nav-link" href="li.html" role="tab" aria-expanded="false">
+					<i class="bi bi-check-circle"></i>		
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+						<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+						<path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+					  </svg>
+					Read</a>
+			</li>
+          </ul>
+        </div>
+    </div>
+</header>
+
+<body style="background-color: #eeeeee;">  
+	<div class="spin-loader d-none" style="margin: auto;width: 50%;padding: 10px;display: flex;align-items: center;justify-content: center;">
+		<div class="spinner-grow" role="status">
+			<span class="sr-only">Loading...</span>
+		</div>
+	</div>
+	<div class="app">
+		<div id="search-div" class="search-books" style="display: none">
+		<div class="search-books-bar">
+			<button class="close-search" onClick={closeSearch}>Close</button>
+			<div class="search-books-input-wrapper">
+			<input type="text" placeholder="Search by title or author" />
+
+			</div>
+		</div>
+		<div class="search-books-results">
+			<ol class="books-grid"></ol>
+		</div>
+		</div>
+	<section>	<!-- JUMOBO-->
+		<div class="list-books">
+		<div class="list-books-title" style="margin-top: -1.2%; background-color: #eeeeee;">
+			<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="300">
+				<div class="carousel-inner">
+				  <div class="carousel-item active">
+					  <img src="img/open-book1.png" class="d-block w-10 carrosel" alt="...">
+				  </div>
+				  <div class="carousel-item active">
+					<img src="img/open-book1.png" class="d-block w-10 carrosel-filho" alt="...">
+				 </div>
+				  <div class="jumbo jumbotron jumbotron-fluid" style="background: #001529;">
+					<div class="container">
+					  <h1 class="display-4 font-weight-bold ">E-Books for everyone!</h1>
+					  <p class="jumbo-filho lead font-italic">Search your book down below</p>
+				  	</div>
+				 </div>
+				</div>
+			</div>
+		</div>
+		<div class="d-flex justify-content-center px-5">
+			<div class="search"> <input id="book-search-input" type="text" class="search-input" placeholder="Search..." name=""> <a id="book-search-action" href="#" class="search-icon"> <i class="fa fa-search"></i> </a> </div>
+		</div>
+	</section>
+		<div class="list-books-content">
+			<div>
+				<div class="bookshelf" id="results-div">
+					<h2 class="bookshelf-title">Results</h2>
+					<div class="bookshelf-books">
+					<ol class="books-grid" id="results-list">
+						<!-- SEARCH BOOKS -->
+					</ol>
+					</div>
+				</div>
+
+				<!-- CURRENTLY READING LIST
+				<div class="bookshelf" id="currentlyReading-div">
+					<h2 class="bookshelf-title"> Currently Reading </h2>
+					<div class="bookshelf-books">
+					<ol class="books-grid" id="currentlyReading-list">
+						<!-- BOOK ITEM -->
+						<!--
+							<li>
+								<div class="book">
+									<div class="book-top">
+									<div class="book-cover"
+										style='width:128px;height:193px;background-image:url("https://books.google.com/books/content?id=PGR2AwAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE73-GnPVEyb7MOCxDzOYF1PTQRuf6nCss9LMNOSWBpxBrz8Pm2_mFtWMMg_Y1dx92HT7cUoQBeSWjs3oEztBVhUeDFQX6-tWlWz1-feexS0mlJPjotcwFqAg6hBYDXuK_bkyHD-y&source=gbs_api")'>
+									</div>
+									<div class="book-shelf-changer">
+										<select>
+										<option value="move" disabled>Move to...</option>
+										<option value="currentlyReading">Currently Reading</option>
+										<option value="wantToRead">Want to Read</option>
+										<option value="read">Read</option>
+										<option value="none">None</option>
+										</select>
+									</div>
+									</div>
+									<div class="book-title">To Kill a Mockingbird</div>
+									<div class="book-authors">Harper Lee</div>
+								</div>
+							</li>
+						-->
+
+					<!-- </ol>
+					</div>
+				</div> -->
+
+				<!-- WANT TO READ LIST -->
+				<!-- <div class="bookshelf" id="wantToRead-div">
+					<h2 class="bookshelf-title">Want to Read</h2>
+					<div class="bookshelf-books">
+					<ol class="books-grid" id="wantToRead-list"> -->
+						<!-- BOOK ITEM -->
+						<!--
+							<li>
+								<div class="book">
+									<div class="book-top">
+									<div class="book-cover"
+										style='width:128px;height:193px;background-image:url("https://books.google.com/books/content?id=uu1mC6zWNTwC&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE73pGHfBNSsJG9Y8kRBpmLUft9O4BfItHioHolWNKOdLavw-SLcXADy3CPAfJ0_qMb18RmCa7Ds1cTdpM3dxAGJs8zfCfm8c6ggBIjzKT7XR5FIB53HHOhnsT7a0Cc-PpneWq9zX&source=gbs_api")'>
+									</div>
+									<div class="book-shelf-changer">
+										<select>
+										<option value="move" disabled>Move to...</option>
+										<option value="currentlyReading">Currently Reading</option>
+										<option value="wantToRead">Want to Read</option>
+										<option value="read">Read</option>
+										<option value="none">None</option>
+										</select>
+									</div>
+									</div>
+									<div class="book-title">1776</div>
+									<div class="book-authors">David McCullough</div>
+								</div>
+							</li>
+						-->
+					<!-- </ol>
+					</div>
+				</div> -->
+
+				<!-- READ LIST -->
+				<!-- <div class="bookshelf" id="read-div">
+					<h2 class="bookshelf-title">Read</h2>
+					<div class="bookshelf-books">
+					<ol class="books-grid" id="read-list"> -->
+					<!-- BOOK ITEM -->
+						<!--
+							<li>
+								<div class="book">
+									<div class="book-top">
+									<div class="book-cover"
+										style='width:128px;height:192px;background-image:url("https://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70Rw0CCwNZh0SsYpQTkMbvz23npqWeUoJvVbi_gXla2m2ie_ReMWPl0xoU8Quy9fk0Zhb3szmwe8cTe4k7DAbfQ45FEzr9T7Lk0XhVpEPBvwUAztOBJ6Y0QPZylo4VbB7K5iRSk&source=gbs_api")'>
+									</div>
+									<div class="book-shelf-changer">
+										<select>
+										<option value="move" disabled>Move to...</option>
+										<option value="currentlyReading">Currently Reading</option>
+										<option value="wantToRead">Want to Read</option>
+										<option value="read">Read</option>
+										<option value="none">None</option>
+										</select>
+									</div>
+									</div>
+									<div class="book-title">The Hobbit</div>
+									<div class="book-authors">J.R.R. Tolkien</div>
+								</div>
+							</li>
+						-->
+					<!-- </ol>
+					</div>
+				</div> --> 
+			</div>
+		</div>
+		<!-- <div class="open-search">
+			<button id="search_button">Add a book</button>
+		</div> -->
+	</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="client.js"></script>
+	<script>
+		books = [] // GLOBAL LIST OF BOOKS
+
+		// Hide the app and show the spin-loader
+		function showSpin(callback) {
+			$('.spin-loader').removeClass('d-none');
+			$('.app').addClass('d-none');
+		}
+
+		// Hide spin-loader and hide the app
+		function hideSpin() {
+			$('.app').removeClass('d-none');
+			$('.spin-loader').addClass('d-none');
+		}
+
+		// Feeding and Categorizing
+		async function feedBooks(_books = []) {
+			showSpin()
+			let currentlyReading 	= []
+			let wantToRead 		= []
+			let read 				= []
+
+			// Load books
+			if (_books.length) {
+				books = _books
+			} else {
+				response = await getMyBooks();
+				books = response.books;
+			}
+
+			// Emptying the lists
+			$('#currentlyReading-list').empty()
+			$('#wantToRead-list').empty()
+			$('#read-list').empty()
+			$('#results-list').empty()
+
+			books.forEach(book => {
+				if (book.shelf == "currentlyReading") {
+					$('#currentlyReading-list').append(`
+						<li id="${book.id}">
+							<div class="book">
+								<div class="book-top">
+								<div class="book-cover"
+									style='width:128px;height:193px;background-image:url("${book.imageLinks.thumbnail}")'>
+								</div>
+								<div class="book-shelf-changer">
+									<select class="book-shelf" onchange="onChangeCategory(this, '${book.id}')">
+										<option value="move" disabled selected>Move to...</option>
+										<option value="currentlyReading">Currently Reading</option>
+										<option value="wantToRead">Want to Read</option>
+										<option value="read">Read</option>
+										<option value="none">None</option>
+									</select>
+								</div>
+								</div>
+								<div class="book-title">${book.title}</div>
+								<div class="book-authors">${book.authors.join(', ')}</div>
+							</div>
+						</li>
+					`)
+				} else if (book.shelf == "wantToRead") {
+					$('#wantToRead-list').append(`
+						<li id="${book.id}">
+							<div class="book">
+								<div class="book-top">
+								<div class="book-cover"
+									style='width:128px;height:193px;background-image:url("${book.imageLinks.thumbnail}")'>
+								</div>
+								<div class="book-shelf-changer">
+									<select class="book-shelf" onchange="onChangeCategory(this, '${book.id}')">
+										<option value="move" disabled selected>Move to...</option>
+										<option value="currentlyReading">Currently Reading</option>
+										<option value="wantToRead">Want to Read</option>
+										<option value="read">Read</option>
+										<option value="none">None</option>
+									</select>
+								</div>
+								</div>
+								<div class="book-title">${book.title}</div>
+								<div class="book-authors">${book.authors.join(', ')}</div>
+							</div>
+						</li>
+					`)
+				} else if (book.shelf == "read") {
+					$('#read-list').append(`
+						<li id="${book.id}">
+							<div class="book">
+								<div class="book-top">
+								<div class="book-cover"
+									style='width:128px;height:193px;background-image:url("${book.imageLinks.thumbnail}")'>
+								</div>
+								<div class="book-shelf-changer">
+									<select class="book-shelf" onchange="onChangeCategory(this, '${book.id}')">
+										<option value="move" disabled selected>Move to...</option>
+										<option value="currentlyReading">Currently Reading</option>
+										<option value="wantToRead">Want to Read</option>
+										<option value="read">Read</option>
+										<option value="none">None</option>
+									</select>
+								</div>
+								</div>
+								<div class="book-title">${book.title}</div>
+								<div class="book-authors">${book.authors.join(', ')}</div>
+							</div>
+						</li>
+					`)
+				} else {
+					$('#results-list').append(`
+						<li id="${book.id}">
+							<div class="book" style="box-sizing: border-box;border: 1px groove #ffffff40;border-radius: 4%;padding: 18px 6px 35px 6px;background-color: white;box-shadow: 2px 2px 8px #00000021;">
+								<div class="book-top">
+								<div class="book-cover"
+									style='background-repeat: no-repeat;background-size: cover;width:128px;height:183px;background-image:url("${book.imageLinks.thumbnail}")'>
+								</div>
+								<div class="book-shelf-changer">
+									<select class="book-shelf" onchange="onChangeCategory(this, '${book.id}')">
+										<option value="move" disabled selected>Move to...</option>
+										<option value="currentlyReading">Currently Reading</option>
+										<option value="wantToRead">Want to Read</option>
+										<option value="read">Read</option>
+										<option value="none">None</option>
+									</select>
+								</div>
+								</div>
+								<div class="book-title" style="text-align: center;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2; /* number of lines to show */-webkit-box-orient: vertical;">${book.title}</div>
+								<div class="book-authors" style="font-size: 9px;text-align: center;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2; /* number of lines to show */-webkit-box-orient: vertical;" >${book.authors && book.authors.length ? book.authors.join(', ') : ''}</div>
+							</div>
+						</li>
+					`)
+				}
+			});
+
+			currentlyReadingCount = books.filter( book => book.shelf === "currentlyReading").length
+			wantToReadCount = books.filter( book => book.shelf === "wantToRead").length
+			readCount = books.filter( book => book.shelf === "read").length
+			resultsCount = books.filter( book => !Object.keys(book).includes('shelf')).length
+			hideIfNotElements({
+				"currentlyReading-div": currentlyReadingCount,
+				"wantToRead-div": wantToReadCount,
+				"read-div": readCount,
+				"results-div": resultsCount
+			})
+			hideSpin()
+		}
+
+		function hideIfNotElements(ElemsToHide) {
+			keys = Object.keys(ElemsToHide)
+			keys.forEach( key => {
+				if (ElemsToHide[key] === 0) {
+					$(`#${key}`).hide();
+				} else {
+					$(`#${key}`).show();
+				}
+			})
+		}
+
+		// Method called when a categhory has change
+		async function onChangeCategory(event, id) {
+			let cat = $(event).val()
+			await updateBook({ id }, cat)
+			await feedBooks()
+		}
+
+		// Method called when the page is ready (main function basically)
+		$( document ).ready(async () => {
+			await feedBooks()
+			// Search for a book
+			$('#book-search-action').click(async function() {
+				showSpin()
+				let search_input = $('#book-search-input').val()
+				let search_book = []
+				console.log('INPUT: ', search_input)
+				if (search_input) {
+					response = await searchBooks(search_input)
+					await feedBooks(response.books)
+					hideSpin()
+				} else {
+					await feedBooks()
+				}
+			});
+		});
+	</script>
+	
+		<div class="footer">
+			<div class="container">
+			  <span class="copyright text-muted">&copy; Copyright Fernando Lise - 2021</span>
+			</div>
+		</div>
+</body>
+
+</html>
